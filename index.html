@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f0e8" />
+    <meta name="description" content="An interactive browser sandbox for exploring associative memory in a simplified fruit-fly mushroom-body circuit." />
+    <title>Memory Garden — a fly learning sandbox</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Memory Garden home"><span class="brand-mark">✳</span> memory garden</a>
+      <span class="top-note">A small experiment in a fly-sized mind</span>
+      <a class="source-link" href="https://codex.flywire.ai/" target="_blank" rel="noreferrer">Explore FlyWire ↗</a>
+    </header>
+
+    <main id="top">
+      <section class="intro">
+        <div class="intro-copy">
+          <p class="eyebrow">CONNECTOME-INSPIRED · INTERACTIVE MODEL</p>
+          <h1>Can a circuit<br />learn <em>an association?</em></h1>
+          <p class="intro-text">Pair an odor with a good or bad outcome. Then test what the modeled mushroom-body circuit remembers, forgets, or learns to expect instead.</p>
+        </div>
+        <aside class="model-stamp"><span class="stamp-dot"></span><div><strong>Simplified circuit</strong><small>Not a whole-brain emulation</small></div></aside>
+      </section>
+
+      <section class="lab-grid" aria-label="Memory experiment">
+        <section class="panel experiment-panel" aria-labelledby="experiment-title">
+          <div class="panel-heading"><div><p class="eyebrow">01 — EXPERIMENT</p><h2 id="experiment-title">Teach an association</h2></div><span class="counter" id="trial-count">0 trials</span></div>
+          <p class="panel-copy">Choose a cue and outcome, then present them together. The dopamine-like teaching signal changes the model’s cue-to-output synapses.</p>
+
+          <div class="form-row">
+            <label for="odor-select">Cue</label>
+            <select id="odor-select"><option value="A">Odor A · citrus</option><option value="B">Odor B · floral</option></select>
+          </div>
+          <fieldset class="outcome-choice">
+            <legend>Pair it with</legend>
+            <label class="choice-card selected"><input type="radio" name="outcome" value="1" checked /><span class="choice-icon reward">✦</span><span><strong>Sugar</strong><small>Appetitive teaching signal</small></span></label>
+            <label class="choice-card"><input type="radio" name="outcome" value="-1" /><span class="choice-icon aversive">⌁</span><span><strong>Bitter</strong><small>Aversive teaching signal</small></span></label>
+          </fieldset>
+          <div class="repetitions"><label for="repetitions">Training pairings <output id="repetitions-value">5</output></label><input id="repetitions" type="range" min="1" max="12" value="5" /></div>
+          <div class="actions"><button class="button button-primary" id="train-button">Train this pairing <span>↗</span></button><button class="button button-quiet" id="recall-button">Recall both cues</button></div>
+          <div class="secondary-actions"><button id="extinction-button">Present cue without outcome <span>→ extinction</span></button><button id="reverse-button">Reverse this cue’s association <span>→ reversal</span></button><button id="reset-button">Reset experiment</button></div>
+          <p class="status" id="status" role="status" aria-live="polite">The circuit is ready. Try pairing citrus with sugar.</p>
+        </section>
+
+        <section class="panel circuit-panel" aria-labelledby="circuit-title">
+          <div class="panel-heading"><div><p class="eyebrow">02 — CIRCUIT MODEL</p><h2 id="circuit-title">A memory-shaped pathway</h2></div><span class="tag">48 modeled KCs</span></div>
+          <p class="panel-copy">Odor cues activate sparse Kenyon-cell patterns. Dopamine neurons teach mushroom-body output pathways; their weights carry the model’s learned association.</p>
+          <div class="diagram-wrap"><canvas id="circuit-canvas" aria-label="Diagram of odor input, Kenyon cells, dopamine teaching signals, and mushroom-body output neurons"></canvas></div>
+          <div class="legend"><span><i class="legend-line cue-line"></i> cue activity</span><span><i class="legend-line learned-line"></i> learned strength</span><span><i class="legend-dot"></i> teaching signal</span></div>
+          <div class="assumption"><strong>Model choice</strong><span>Reward-modulated plasticity is an explicit approximation, not a mechanism recovered from the wiring diagram.</span></div>
+        </section>
+
+        <section class="panel recall-panel" aria-labelledby="recall-title">
+          <div class="panel-heading"><div><p class="eyebrow">03 — MEMORY TEST</p><h2 id="recall-title">What does it expect?</h2></div><button class="icon-button" id="clear-tests" title="Clear recall history" aria-label="Clear recall history">↺</button></div>
+          <p class="panel-copy">Recall presents each cue alone—no sugar or bitter outcome. Values show the model’s predicted approach-versus-avoid signal.</p>
+          <div class="memory-results" id="memory-results"></div>
+          <div class="plot-wrap"><canvas id="history-canvas" aria-label="Plot of predicted cue values across memory tests"></canvas></div>
+          <div class="plot-labels"><span>earlier tests</span><span>predicted value</span><span>recent tests</span></div>
+        </section>
+
+        <aside class="panel reading-panel" aria-labelledby="reading-title">
+          <p class="eyebrow">A NOTE ON THE SCIENCE</p>
+          <h2 id="reading-title">A model to question,<br /><em>not a fly in a box.</em></h2>
+          <p>This prototype uses a <strong>synthetic, stylized circuit</strong> inspired by mushroom-body learning. It does not load FlyWire connections, reproduce a published neuron-by-neuron model, or establish that a fly’s cognition works this way.</p>
+          <p>The adult fly connectome gives us wiring and annotations. Learning additionally depends on synaptic plasticity, neuromodulation, timing, and biological state—details this toy model supplies as assumptions.</p>
+          <a href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank" rel="noreferrer">Read the connectome-derived brain-model study ↗</a>
+        </aside>
+      </section>
+    </main>
+    <footer><span>Memory Garden · browser-only prototype</span><span>No data leaves this device</span></footer>
+  </body>
+</html>
