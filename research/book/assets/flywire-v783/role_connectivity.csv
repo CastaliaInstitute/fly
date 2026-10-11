@@ -1,0 +1,16 @@
+pre_role,post_role,synapses,neuropil_rows,neuron_pairs
+Kenyon cells,Kenyon cells,12157,5427,2133
+Kenyon cells,MBONs,169931,38915,21438
+Kenyon cells,PAM/PPL1 DANs,12735,3310,2064
+Kenyon cells,other partners,205026,45242,10281
+MBONs,Kenyon cells,226,69,39
+MBONs,MBONs,18551,1487,566
+MBONs,PAM/PPL1 DANs,5521,1077,465
+MBONs,other partners,135170,15907,7083
+PAM/PPL1 DANs,Kenyon cells,1743,567,310
+PAM/PPL1 DANs,MBONs,12922,1579,732
+PAM/PPL1 DANs,PAM/PPL1 DANs,295,77,28
+PAM/PPL1 DANs,other partners,6195,1032,468
+other partners,Kenyon cells,448111,50392,29665
+other partners,MBONs,72459,7470,3551
+other partners,PAM/PPL1 DANs,34259,5549,2823

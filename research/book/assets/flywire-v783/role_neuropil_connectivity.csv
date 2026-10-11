@@ -1,0 +1,413 @@
+neuropil,pre_role,post_role,synapses
+AL_L,MBONs,MBONs,2
+AL_L,MBONs,other partners,102
+AL_L,other partners,MBONs,17
+AL_L,other partners,PAM/PPL1 DANs,1
+AL_R,MBONs,MBONs,161
+AL_R,MBONs,other partners,2304
+AL_R,other partners,MBONs,531
+AL_R,other partners,PAM/PPL1 DANs,9
+AOTU_L,MBONs,other partners,3
+AOTU_L,other partners,MBONs,207
+AOTU_L,other partners,PAM/PPL1 DANs,4
+AOTU_R,MBONs,other partners,15
+AOTU_R,other partners,MBONs,227
+AOTU_R,other partners,PAM/PPL1 DANs,2
+ATL_L,other partners,MBONs,29
+ATL_R,other partners,Kenyon cells,12
+ATL_R,other partners,MBONs,11
+AVLP_L,MBONs,other partners,247
+AVLP_L,other partners,MBONs,10
+AVLP_R,MBONs,other partners,527
+AVLP_R,other partners,MBONs,8
+BU_R,other partners,MBONs,25
+BU_R,other partners,PAM/PPL1 DANs,2
+CAN_L,MBONs,other partners,233
+CAN_L,other partners,MBONs,52
+CAN_R,MBONs,other partners,248
+CAN_R,other partners,MBONs,35
+CRE_L,Kenyon cells,Kenyon cells,337
+CRE_L,Kenyon cells,MBONs,12734
+CRE_L,Kenyon cells,PAM/PPL1 DANs,405
+CRE_L,Kenyon cells,other partners,10361
+CRE_L,MBONs,Kenyon cells,6
+CRE_L,MBONs,MBONs,3012
+CRE_L,MBONs,PAM/PPL1 DANs,593
+CRE_L,MBONs,other partners,14853
+CRE_L,PAM/PPL1 DANs,Kenyon cells,86
+CRE_L,PAM/PPL1 DANs,MBONs,1014
+CRE_L,PAM/PPL1 DANs,PAM/PPL1 DANs,4
+CRE_L,PAM/PPL1 DANs,other partners,491
+CRE_L,other partners,Kenyon cells,3968
+CRE_L,other partners,MBONs,7945
+CRE_L,other partners,PAM/PPL1 DANs,3606
+CRE_R,Kenyon cells,Kenyon cells,196
+CRE_R,Kenyon cells,MBONs,10759
+CRE_R,Kenyon cells,PAM/PPL1 DANs,249
+CRE_R,Kenyon cells,other partners,8012
+CRE_R,MBONs,Kenyon cells,5
+CRE_R,MBONs,MBONs,3083
+CRE_R,MBONs,PAM/PPL1 DANs,718
+CRE_R,MBONs,other partners,18413
+CRE_R,PAM/PPL1 DANs,Kenyon cells,47
+CRE_R,PAM/PPL1 DANs,MBONs,1110
+CRE_R,PAM/PPL1 DANs,PAM/PPL1 DANs,7
+CRE_R,PAM/PPL1 DANs,other partners,694
+CRE_R,other partners,Kenyon cells,2915
+CRE_R,other partners,MBONs,9027
+CRE_R,other partners,PAM/PPL1 DANs,4591
+EB,Kenyon cells,Kenyon cells,4
+EB,Kenyon cells,MBONs,270
+EB,Kenyon cells,PAM/PPL1 DANs,10
+EB,Kenyon cells,other partners,143
+EB,MBONs,MBONs,6
+EB,MBONs,PAM/PPL1 DANs,4
+EB,MBONs,other partners,4
+EB,PAM/PPL1 DANs,Kenyon cells,3
+EB,PAM/PPL1 DANs,MBONs,45
+EB,PAM/PPL1 DANs,other partners,2
+EB,other partners,Kenyon cells,68
+EB,other partners,MBONs,2
+EB,other partners,PAM/PPL1 DANs,5
+FB,PAM/PPL1 DANs,other partners,33
+FB,other partners,MBONs,2
+FB,other partners,PAM/PPL1 DANs,31
+FLA_L,MBONs,MBONs,2
+FLA_L,MBONs,other partners,77
+FLA_L,other partners,MBONs,178
+FLA_R,MBONs,other partners,84
+FLA_R,PAM/PPL1 DANs,other partners,3
+FLA_R,other partners,MBONs,170
+FLA_R,other partners,PAM/PPL1 DANs,5
+GA_L,other partners,MBONs,7
+GA_R,MBONs,other partners,5
+GA_R,other partners,MBONs,5
+GNG,MBONs,other partners,375
+GNG,other partners,MBONs,63
+IB_L,MBONs,other partners,102
+IB_L,other partners,MBONs,10
+IB_R,MBONs,other partners,57
+IB_R,other partners,MBONs,8
+ICL_L,Kenyon cells,Kenyon cells,51
+ICL_L,Kenyon cells,MBONs,24
+ICL_L,Kenyon cells,PAM/PPL1 DANs,25
+ICL_L,Kenyon cells,other partners,292
+ICL_L,MBONs,other partners,534
+ICL_L,PAM/PPL1 DANs,Kenyon cells,3
+ICL_L,PAM/PPL1 DANs,other partners,3
+ICL_L,other partners,Kenyon cells,967
+ICL_L,other partners,MBONs,39
+ICL_L,other partners,PAM/PPL1 DANs,1
+ICL_R,Kenyon cells,Kenyon cells,45
+ICL_R,Kenyon cells,MBONs,183
+ICL_R,Kenyon cells,other partners,848
+ICL_R,MBONs,other partners,701
+ICL_R,PAM/PPL1 DANs,Kenyon cells,6
+ICL_R,other partners,Kenyon cells,2522
+ICL_R,other partners,MBONs,45
+IPS_L,MBONs,other partners,28
+IPS_L,other partners,MBONs,9
+LAL_L,Kenyon cells,Kenyon cells,1
+LAL_L,Kenyon cells,MBONs,13
+LAL_L,Kenyon cells,other partners,26
+LAL_L,MBONs,MBONs,532
+LAL_L,MBONs,PAM/PPL1 DANs,13
+LAL_L,MBONs,other partners,7905
+LAL_L,PAM/PPL1 DANs,MBONs,5
+LAL_L,PAM/PPL1 DANs,other partners,60
+LAL_L,other partners,Kenyon cells,4
+LAL_L,other partners,MBONs,3501
+LAL_L,other partners,PAM/PPL1 DANs,259
+LAL_R,Kenyon cells,MBONs,44
+LAL_R,Kenyon cells,PAM/PPL1 DANs,1
+LAL_R,Kenyon cells,other partners,37
+LAL_R,MBONs,MBONs,478
+LAL_R,MBONs,PAM/PPL1 DANs,9
+LAL_R,MBONs,other partners,6288
+LAL_R,PAM/PPL1 DANs,MBONs,6
+LAL_R,PAM/PPL1 DANs,other partners,66
+LAL_R,other partners,Kenyon cells,23
+LAL_R,other partners,MBONs,2889
+LAL_R,other partners,PAM/PPL1 DANs,318
+LH_L,MBONs,MBONs,8
+LH_L,MBONs,PAM/PPL1 DANs,8
+LH_L,MBONs,other partners,3469
+LH_L,other partners,Kenyon cells,56
+LH_L,other partners,MBONs,544
+LH_L,other partners,PAM/PPL1 DANs,30
+LH_R,MBONs,MBONs,18
+LH_R,MBONs,PAM/PPL1 DANs,31
+LH_R,MBONs,other partners,4000
+LH_R,other partners,Kenyon cells,8
+LH_R,other partners,MBONs,619
+LH_R,other partners,PAM/PPL1 DANs,33
+LO_L,other partners,Kenyon cells,9
+MB_CA_L,Kenyon cells,Kenyon cells,163
+MB_CA_L,Kenyon cells,MBONs,1709
+MB_CA_L,Kenyon cells,PAM/PPL1 DANs,30
+MB_CA_L,Kenyon cells,other partners,11039
+MB_CA_L,MBONs,other partners,128
+MB_CA_L,PAM/PPL1 DANs,Kenyon cells,2
+MB_CA_L,other partners,Kenyon cells,193205
+MB_CA_L,other partners,MBONs,288
+MB_CA_L,other partners,PAM/PPL1 DANs,1
+MB_CA_R,Kenyon cells,Kenyon cells,88
+MB_CA_R,Kenyon cells,MBONs,1751
+MB_CA_R,Kenyon cells,PAM/PPL1 DANs,22
+MB_CA_R,Kenyon cells,other partners,11552
+MB_CA_R,MBONs,other partners,133
+MB_CA_R,PAM/PPL1 DANs,Kenyon cells,43
+MB_CA_R,PAM/PPL1 DANs,other partners,6
+MB_CA_R,other partners,Kenyon cells,159827
+MB_CA_R,other partners,MBONs,249
+MB_CA_R,other partners,PAM/PPL1 DANs,2
+MB_ML_L,Kenyon cells,Kenyon cells,1374
+MB_ML_L,Kenyon cells,MBONs,46161
+MB_ML_L,Kenyon cells,PAM/PPL1 DANs,2112
+MB_ML_L,Kenyon cells,other partners,43559
+MB_ML_L,MBONs,Kenyon cells,131
+MB_ML_L,MBONs,MBONs,2399
+MB_ML_L,MBONs,PAM/PPL1 DANs,804
+MB_ML_L,MBONs,other partners,2688
+MB_ML_L,PAM/PPL1 DANs,Kenyon cells,498
+MB_ML_L,PAM/PPL1 DANs,MBONs,4160
+MB_ML_L,PAM/PPL1 DANs,PAM/PPL1 DANs,31
+MB_ML_L,PAM/PPL1 DANs,other partners,711
+MB_ML_L,other partners,Kenyon cells,17189
+MB_ML_L,other partners,MBONs,3143
+MB_ML_L,other partners,PAM/PPL1 DANs,1051
+MB_ML_R,Kenyon cells,Kenyon cells,854
+MB_ML_R,Kenyon cells,MBONs,30374
+MB_ML_R,Kenyon cells,PAM/PPL1 DANs,906
+MB_ML_R,Kenyon cells,other partners,33833
+MB_ML_R,MBONs,Kenyon cells,23
+MB_ML_R,MBONs,MBONs,1590
+MB_ML_R,MBONs,PAM/PPL1 DANs,535
+MB_ML_R,MBONs,other partners,2062
+MB_ML_R,PAM/PPL1 DANs,Kenyon cells,289
+MB_ML_R,PAM/PPL1 DANs,MBONs,2928
+MB_ML_R,PAM/PPL1 DANs,PAM/PPL1 DANs,10
+MB_ML_R,PAM/PPL1 DANs,other partners,544
+MB_ML_R,other partners,Kenyon cells,13025
+MB_ML_R,other partners,MBONs,2021
+MB_ML_R,other partners,PAM/PPL1 DANs,732
+MB_PED_L,Kenyon cells,Kenyon cells,3210
+MB_PED_L,Kenyon cells,MBONs,7614
+MB_PED_L,Kenyon cells,PAM/PPL1 DANs,2239
+MB_PED_L,Kenyon cells,other partners,20723
+MB_PED_L,MBONs,Kenyon cells,21
+MB_PED_L,MBONs,MBONs,474
+MB_PED_L,MBONs,PAM/PPL1 DANs,384
+MB_PED_L,MBONs,other partners,505
+MB_PED_L,PAM/PPL1 DANs,Kenyon cells,97
+MB_PED_L,PAM/PPL1 DANs,MBONs,537
+MB_PED_L,PAM/PPL1 DANs,PAM/PPL1 DANs,127
+MB_PED_L,PAM/PPL1 DANs,other partners,252
+MB_PED_L,other partners,Kenyon cells,9751
+MB_PED_L,other partners,MBONs,687
+MB_PED_L,other partners,PAM/PPL1 DANs,239
+MB_PED_R,Kenyon cells,Kenyon cells,2551
+MB_PED_R,Kenyon cells,MBONs,10014
+MB_PED_R,Kenyon cells,PAM/PPL1 DANs,1406
+MB_PED_R,Kenyon cells,other partners,16574
+MB_PED_R,MBONs,Kenyon cells,7
+MB_PED_R,MBONs,MBONs,558
+MB_PED_R,MBONs,PAM/PPL1 DANs,318
+MB_PED_R,MBONs,other partners,427
+MB_PED_R,PAM/PPL1 DANs,Kenyon cells,91
+MB_PED_R,PAM/PPL1 DANs,MBONs,685
+MB_PED_R,PAM/PPL1 DANs,PAM/PPL1 DANs,36
+MB_PED_R,PAM/PPL1 DANs,other partners,146
+MB_PED_R,other partners,Kenyon cells,7264
+MB_PED_R,other partners,MBONs,677
+MB_PED_R,other partners,PAM/PPL1 DANs,166
+MB_VL_L,Kenyon cells,Kenyon cells,665
+MB_VL_L,Kenyon cells,MBONs,13825
+MB_VL_L,Kenyon cells,PAM/PPL1 DANs,1548
+MB_VL_L,Kenyon cells,other partners,13368
+MB_VL_L,MBONs,Kenyon cells,15
+MB_VL_L,MBONs,MBONs,542
+MB_VL_L,MBONs,PAM/PPL1 DANs,207
+MB_VL_L,MBONs,other partners,355
+MB_VL_L,PAM/PPL1 DANs,Kenyon cells,277
+MB_VL_L,PAM/PPL1 DANs,MBONs,776
+MB_VL_L,PAM/PPL1 DANs,PAM/PPL1 DANs,17
+MB_VL_L,PAM/PPL1 DANs,other partners,566
+MB_VL_L,other partners,Kenyon cells,5251
+MB_VL_L,other partners,MBONs,968
+MB_VL_L,other partners,PAM/PPL1 DANs,668
+MB_VL_R,Kenyon cells,Kenyon cells,715
+MB_VL_R,Kenyon cells,MBONs,23040
+MB_VL_R,Kenyon cells,PAM/PPL1 DANs,2522
+MB_VL_R,Kenyon cells,other partners,16699
+MB_VL_R,MBONs,Kenyon cells,4
+MB_VL_R,MBONs,MBONs,847
+MB_VL_R,MBONs,PAM/PPL1 DANs,303
+MB_VL_R,MBONs,other partners,754
+MB_VL_R,PAM/PPL1 DANs,Kenyon cells,172
+MB_VL_R,PAM/PPL1 DANs,MBONs,1171
+MB_VL_R,PAM/PPL1 DANs,PAM/PPL1 DANs,21
+MB_VL_R,PAM/PPL1 DANs,other partners,640
+MB_VL_R,other partners,Kenyon cells,6022
+MB_VL_R,other partners,MBONs,1264
+MB_VL_R,other partners,PAM/PPL1 DANs,547
+NO,MBONs,MBONs,6
+NO,MBONs,other partners,103
+NO,PAM/PPL1 DANs,other partners,1
+NO,other partners,MBONs,50
+NO,other partners,PAM/PPL1 DANs,5
+PB,Kenyon cells,MBONs,11
+PB,Kenyon cells,other partners,33
+PB,other partners,Kenyon cells,24
+PLP_L,Kenyon cells,Kenyon cells,554
+PLP_L,Kenyon cells,MBONs,429
+PLP_L,Kenyon cells,PAM/PPL1 DANs,322
+PLP_L,Kenyon cells,other partners,2217
+PLP_L,MBONs,MBONs,5
+PLP_L,MBONs,PAM/PPL1 DANs,4
+PLP_L,MBONs,other partners,1307
+PLP_L,PAM/PPL1 DANs,Kenyon cells,42
+PLP_L,PAM/PPL1 DANs,other partners,4
+PLP_L,other partners,Kenyon cells,7619
+PLP_L,other partners,MBONs,131
+PLP_L,other partners,PAM/PPL1 DANs,4
+PLP_R,Kenyon cells,Kenyon cells,321
+PLP_R,Kenyon cells,MBONs,418
+PLP_R,Kenyon cells,PAM/PPL1 DANs,57
+PLP_R,Kenyon cells,other partners,1942
+PLP_R,MBONs,MBONs,5
+PLP_R,MBONs,PAM/PPL1 DANs,9
+PLP_R,MBONs,other partners,1391
+PLP_R,PAM/PPL1 DANs,Kenyon cells,17
+PLP_R,PAM/PPL1 DANs,other partners,1
+PLP_R,other partners,Kenyon cells,7516
+PLP_R,other partners,MBONs,141
+PLP_R,other partners,PAM/PPL1 DANs,3
+PVLP_L,MBONs,other partners,443
+PVLP_L,other partners,MBONs,17
+PVLP_R,MBONs,other partners,425
+PVLP_R,other partners,MBONs,17
+SAD,MBONs,other partners,395
+SAD,other partners,MBONs,53
+SCL_L,Kenyon cells,Kenyon cells,77
+SCL_L,Kenyon cells,MBONs,46
+SCL_L,Kenyon cells,PAM/PPL1 DANs,12
+SCL_L,Kenyon cells,other partners,852
+SCL_L,MBONs,PAM/PPL1 DANs,4
+SCL_L,MBONs,other partners,880
+SCL_L,PAM/PPL1 DANs,MBONs,5
+SCL_L,PAM/PPL1 DANs,PAM/PPL1 DANs,1
+SCL_L,PAM/PPL1 DANs,other partners,5
+SCL_L,other partners,Kenyon cells,3331
+SCL_L,other partners,MBONs,151
+SCL_L,other partners,PAM/PPL1 DANs,54
+SCL_R,Kenyon cells,Kenyon cells,382
+SCL_R,Kenyon cells,MBONs,247
+SCL_R,Kenyon cells,PAM/PPL1 DANs,183
+SCL_R,Kenyon cells,other partners,2874
+SCL_R,MBONs,PAM/PPL1 DANs,3
+SCL_R,MBONs,other partners,911
+SCL_R,PAM/PPL1 DANs,Kenyon cells,36
+SCL_R,PAM/PPL1 DANs,MBONs,7
+SCL_R,PAM/PPL1 DANs,PAM/PPL1 DANs,4
+SCL_R,PAM/PPL1 DANs,other partners,3
+SCL_R,other partners,Kenyon cells,2618
+SCL_R,other partners,MBONs,109
+SCL_R,other partners,PAM/PPL1 DANs,14
+SIP_L,Kenyon cells,Kenyon cells,291
+SIP_L,Kenyon cells,MBONs,5106
+SIP_L,Kenyon cells,PAM/PPL1 DANs,150
+SIP_L,Kenyon cells,other partners,4465
+SIP_L,MBONs,Kenyon cells,10
+SIP_L,MBONs,MBONs,536
+SIP_L,MBONs,PAM/PPL1 DANs,243
+SIP_L,MBONs,other partners,5338
+SIP_L,PAM/PPL1 DANs,Kenyon cells,9
+SIP_L,PAM/PPL1 DANs,MBONs,123
+SIP_L,PAM/PPL1 DANs,PAM/PPL1 DANs,1
+SIP_L,PAM/PPL1 DANs,other partners,202
+SIP_L,other partners,Kenyon cells,1460
+SIP_L,other partners,MBONs,2578
+SIP_L,other partners,PAM/PPL1 DANs,1208
+SIP_R,Kenyon cells,Kenyon cells,51
+SIP_R,Kenyon cells,MBONs,763
+SIP_R,Kenyon cells,PAM/PPL1 DANs,76
+SIP_R,Kenyon cells,other partners,1556
+SIP_R,MBONs,MBONs,347
+SIP_R,MBONs,PAM/PPL1 DANs,304
+SIP_R,MBONs,other partners,7195
+SIP_R,PAM/PPL1 DANs,Kenyon cells,3
+SIP_R,PAM/PPL1 DANs,MBONs,63
+SIP_R,PAM/PPL1 DANs,PAM/PPL1 DANs,5
+SIP_R,PAM/PPL1 DANs,other partners,335
+SIP_R,other partners,Kenyon cells,351
+SIP_R,other partners,MBONs,2746
+SIP_R,other partners,PAM/PPL1 DANs,1669
+SLP_L,Kenyon cells,Kenyon cells,6
+SLP_L,Kenyon cells,MBONs,3
+SLP_L,Kenyon cells,other partners,91
+SLP_L,MBONs,MBONs,142
+SLP_L,MBONs,PAM/PPL1 DANs,38
+SLP_L,MBONs,other partners,3652
+SLP_L,PAM/PPL1 DANs,MBONs,3
+SLP_L,PAM/PPL1 DANs,other partners,1
+SLP_L,other partners,Kenyon cells,1013
+SLP_L,other partners,MBONs,502
+SLP_L,other partners,PAM/PPL1 DANs,137
+SLP_R,Kenyon cells,Kenyon cells,1
+SLP_R,Kenyon cells,other partners,71
+SLP_R,MBONs,MBONs,91
+SLP_R,MBONs,PAM/PPL1 DANs,30
+SLP_R,MBONs,other partners,4539
+SLP_R,PAM/PPL1 DANs,MBONs,1
+SLP_R,PAM/PPL1 DANs,other partners,2
+SLP_R,other partners,Kenyon cells,947
+SLP_R,other partners,MBONs,457
+SLP_R,other partners,PAM/PPL1 DANs,430
+SMP_L,Kenyon cells,Kenyon cells,95
+SMP_L,Kenyon cells,MBONs,1898
+SMP_L,Kenyon cells,PAM/PPL1 DANs,48
+SMP_L,Kenyon cells,other partners,1722
+SMP_L,MBONs,Kenyon cells,4
+SMP_L,MBONs,MBONs,1454
+SMP_L,MBONs,PAM/PPL1 DANs,448
+SMP_L,MBONs,other partners,14911
+SMP_L,PAM/PPL1 DANs,Kenyon cells,15
+SMP_L,PAM/PPL1 DANs,MBONs,148
+SMP_L,PAM/PPL1 DANs,PAM/PPL1 DANs,11
+SMP_L,PAM/PPL1 DANs,other partners,518
+SMP_L,other partners,Kenyon cells,564
+SMP_L,other partners,MBONs,13671
+SMP_L,other partners,PAM/PPL1 DANs,8737
+SMP_R,Kenyon cells,Kenyon cells,123
+SMP_R,Kenyon cells,MBONs,2495
+SMP_R,Kenyon cells,PAM/PPL1 DANs,412
+SMP_R,Kenyon cells,other partners,2137
+SMP_R,MBONs,MBONs,2032
+SMP_R,MBONs,PAM/PPL1 DANs,506
+SMP_R,MBONs,other partners,20409
+SMP_R,PAM/PPL1 DANs,Kenyon cells,7
+SMP_R,PAM/PPL1 DANs,MBONs,135
+SMP_R,PAM/PPL1 DANs,PAM/PPL1 DANs,20
+SMP_R,PAM/PPL1 DANs,other partners,882
+SMP_R,other partners,Kenyon cells,574
+SMP_R,other partners,MBONs,14078
+SMP_R,other partners,PAM/PPL1 DANs,9633
+SPS_L,MBONs,other partners,620
+SPS_L,other partners,Kenyon cells,8
+SPS_L,other partners,MBONs,91
+SPS_R,MBONs,other partners,755
+SPS_R,other partners,MBONs,97
+UNASGD,Kenyon cells,Kenyon cells,2
+VES_L,MBONs,MBONs,80
+VES_L,MBONs,PAM/PPL1 DANs,5
+VES_L,MBONs,other partners,1557
+VES_L,PAM/PPL1 DANs,other partners,15
+VES_L,other partners,MBONs,1007
+VES_L,other partners,PAM/PPL1 DANs,36
+VES_R,MBONs,MBONs,141
+VES_R,MBONs,other partners,2711
+VES_R,PAM/PPL1 DANs,other partners,9
+VES_R,other partners,MBONs,1051
+VES_R,other partners,PAM/PPL1 DANs,26
+WED_R,MBONs,other partners,2

@@ -13,11 +13,22 @@ jupyter book build research/book --html --execute
 python -m research.run_experiments --replicates 40
 ```
 
-The book renders to `research/book/_build/html/`. The experiment notebook and model run without external data. Real FlyWire files are downloaded locally through the Codex export flow below; raw and processed connectome files are excluded from Git.
+The book renders to `research/book/_build/html/`. The experiment notebook and model run without external data. The public book includes small, attributed summary tables and figures computed from the real FlyWire v783 release; raw and filtered connection tables stay local and are excluded from Git.
 
 `python -m research.run_experiments` saves replicate-level CSVs, a processed summary table, a run manifest, and PNG figures under `research/results/`.
 
-## Download and prepare FlyWire v783
+## Explore the public FlyWire v783 connection release
+
+No Codex account token is needed for this reproducible first analysis. It downloads the official proofread directed-edge Feather table from Zenodo (852 MB) and the systematic neuron annotations TSV from a pinned GitHub commit (31.7 MB), then prepares an annotated one-hop graph around Kenyon cells, MBONs, and PAM/PPL1 dopamine-neuron types.
+
+```bash
+python -m research.download_flywire_v783 --output research/data/raw/fafb-v783-public
+python -m research.analyze_flywire_v783
+```
+
+The downloader verifies the Zenodo MD5 and records SHA-256 hashes. The analysis applies a 5-synapse threshold to each directed neuron pair after summing across neuropils, then retains region-specific rows for selected cells and their partners. It writes the full filtered edge table locally and small aggregate CSV/PNG summaries to `research/book/assets/flywire-v783/`; these aggregates are the FlyWire figures published in the book.
+
+## Optional Codex CSV downloads
 
 1. Sign in to [FlyWire Codex](https://codex.flywire.ai/) and create/copy a Codex API token from your account page. The token is private; do not put it in a notebook, a command-line argument, or a committed file.
 2. Set it only in your local shell, then fetch the FAFB v783 connection and cell-type exports:
@@ -41,7 +52,7 @@ The preparation step retains directed connections with at least three synapses w
 
 ## Sources, versioning, and limits
 
-- The download targets Codex's current static **FAFB** export, currently identified as v783. Each local download writes a manifest with the dataset, file hashes, and preparation criteria. Re-check the Codex dataset/version page before comparing results across time.
+- The public Feather analysis pins the **FAFB v783** Zenodo record and pins the accompanying annotation repository commit. The alternate Codex downloader follows Codex's current static FAFB export, which can change; check its version before comparing.
 - The official FlyWire FAFB release is open access under **CC BY 4.0**. See the [Zenodo record](https://doi.org/10.5281/zenodo.10676866) and [FlyWire connectome papers](https://codex.flywire.ai/about_flywire). Cite the primary dataset and papers in any downstream work.
 - A connectome supplies structural connectivity, not learned synaptic state or a validated learning rule. The Python memory model remains a transparent toy model; the FlyWire files are explored separately until a scientifically justified mapping between them is implemented.
-- The full Zenodo connection table is about 852 MB; the much larger synapse-location table is about 9.5 GB. This project does not download or publish the raw tables by default.
+- The full Zenodo connection table is about 852 MB; the much larger synapse-location table is about 9.5 GB. The local analysis downloads the connection table because it is the source of the actual edge counts, but neither it nor the full one-hop edge table is published in Git.

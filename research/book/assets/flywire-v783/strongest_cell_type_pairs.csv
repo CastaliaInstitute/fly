@@ -1,0 +1,31 @@
+pre_role,pre_cell_type,post_role,post_cell_type,synapses,neuron_pairs
+other partners,other partner,Kenyon cells,KCg-m,222778,14337
+other partners,other partner,Kenyon cells,KCab,154316,10309
+Kenyon cells,KCg-m,other partners,other partner,72837,4389
+Kenyon cells,KCab,other partners,other partner,58702,3159
+Kenyon cells,KCapbp-m,other partners,other partner,23372,705
+other partners,other partner,Kenyon cells,KCg-d,19619,1336
+Kenyon cells,KCab,MBONs,MBON07,17827,2341
+Kenyon cells,KCapbp-ap2,other partners,other partner,17381,604
+Kenyon cells,KCapbp-ap1,other partners,other partner,17129,561
+Kenyon cells,KCg-m,MBONs,MBON05,17093,1897
+Kenyon cells,KCab,MBONs,MBON14,16732,2125
+other partners,other partner,Kenyon cells,KCapbp-m,16540,1205
+other partners,other partner,MBONs,MBON35,15516,755
+MBONs,MBON12,other partners,other partner,14062,781
+other partners,other partner,Kenyon cells,KCapbp-ap1,13502,961
+Kenyon cells,KCg-m,MBONs,MBON09,13147,1984
+other partners,other partner,Kenyon cells,KCapbp-ap2,12469,962
+MBONs,MBON20,other partners,other partner,9556,553
+MBONs,MBON26,other partners,other partner,9451,250
+other partners,other partner,PAM/PPL1 DANs,PPL107,9402,579
+Kenyon cells,KCab,MBONs,MBON06,8973,942
+Kenyon cells,KCg-m,MBONs,MBON11,8513,1244
+Kenyon cells,KCab,MBONs,MBON18,8209,1078
+Kenyon cells,KCg-d,other partners,other partner,7918,586
+other partners,other partner,MBONs,MBON04,7877,316
+other partners,other partner,Kenyon cells,KCab-p,7749,489
+MBONs,MBON35,other partners,other partner,7740,284
+MBONs,MBON13,other partners,other partner,7333,386
+Kenyon cells,KCab-p,other partners,other partner,7286,256
+MBONs,MBON09,other partners,other partner,7167,384

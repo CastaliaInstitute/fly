@@ -1,0 +1,38 @@
+{
+  "dataset": "FlyWire FAFB v783",
+  "source_connectivity": "proofread_connections_783.feather",
+  "source_annotations": "Supplemental_file1_neuron_annotations.tsv",
+  "synapse_threshold": 5,
+  "threshold_semantics": "Directed neuron-pair total across neuropils, using FAFB's 5-synapse starting threshold.",
+  "selected_annotated_neurons": {
+    "Kenyon cells": 5177,
+    "PAM/PPL1 DANs": 323,
+    "MBONs": 96
+  },
+  "qualifying_neuron_pairs_in_full_table": 2700513,
+  "one_hop_connection_rows": 178100,
+  "one_hop_unique_neuron_pairs": 81646,
+  "raw_synapse_count_used_as_weight": "syn_count is an anatomical count, not a measured synaptic efficacy or signed neural weight.",
+  "citation": "Dorkenwald et al. 2024, doi:10.1038/s41586-024-07558-y; FlyWire annotations release v783.",
+  "license": "Connectivity release CC BY 4.0.",
+  "annotation_repository_commit": "a83b2776d60d5764cef36b927f5f9679c16c47a2",
+  "input_hashes": {
+    "Supplemental_file1_neuron_annotations.tsv": {
+      "url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/a83b2776d60d5764cef36b927f5f9679c16c47a2/supplemental_files/Supplemental_file1_neuron_annotations.tsv",
+      "bytes": 31720298,
+      "sha256": "b214970b55d2fbe0853bba536fdcb9e28730f4eb7ab06f600491df795da683cd",
+      "md5": "fd4fcb205256ca2f80a2eca3a0cc5d87"
+    },
+    "proofread_connections_783.feather": {
+      "url": "https://zenodo.org/api/records/10676866/files/proofread_connections_783.feather/content",
+      "bytes": 852022274,
+      "sha256": "24f960ae3e7d4f8cd30db3b62e99fb5179cc3d1e76d8c155bfb441e9737d3faf",
+      "md5": "f48f972d262323a102aed49af1396b8a"
+    }
+  },
+  "software": {
+    "pandas": "3.0.6",
+    "pyarrow": "26.0.0"
+  },
+  "analyzed_utc": "2026-10-11T15:33:15.163728+00:00"
+}

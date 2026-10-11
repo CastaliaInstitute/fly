@@ -7,10 +7,44 @@ import unittest
 from unittest.mock import patch
 from pathlib import Path
 
+import pandas as pd
+
+from research.analyze_flywire_v783 import analyze_release
 from research.src.flywire_ingest import download_products, prepare_subgraph
 
 
 class FlyWireIngestionTests(unittest.TestCase):
+    def test_analyze_release_produces_real_data_product_schema(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            annotations = root / "annotations.tsv"
+            pd.DataFrame(
+                [
+                    {"root_id": "101", "cell_class": "Kenyon_Cell", "cell_type": "KCab", "hemibrain_type": "KCab-s", "side": "left", "top_nt": "acetylcholine"},
+                    {"root_id": "201", "cell_class": "MBON", "cell_type": "MBON01", "hemibrain_type": "MBON01", "side": "left", "top_nt": "acetylcholine"},
+                    {"root_id": "301", "cell_class": "DAN", "cell_type": "PAM01", "hemibrain_type": "PAM01", "side": "left", "top_nt": "dopamine"},
+                    {"root_id": "401", "cell_class": "central", "cell_type": "LN01", "hemibrain_type": "LN01", "side": "left", "top_nt": "GABA"},
+                ]
+            ).to_csv(annotations, sep="\t", index=False)
+            connections = root / "connections.feather"
+            pd.DataFrame(
+                [
+                    {"pre_pt_root_id": 101, "post_pt_root_id": 201, "neuropil": "MB_CA_R", "syn_count": 6},
+                    {"pre_pt_root_id": 301, "post_pt_root_id": 201, "neuropil": "MB_PED_R", "syn_count": 10},
+                    {"pre_pt_root_id": 401, "post_pt_root_id": 101, "neuropil": "AL_R", "syn_count": 8},
+                    {"pre_pt_root_id": 201, "post_pt_root_id": 401, "neuropil": "MB_R", "syn_count": 7},
+                    {"pre_pt_root_id": 101, "post_pt_root_id": 301, "neuropil": "MB_R", "syn_count": 3},
+                ]
+            ).to_feather(connections)
+            manifest = analyze_release(connections, annotations, root / "processed", root / "site")
+            self.assertEqual(manifest["selected_annotated_neurons"]["Kenyon cells"], 1)
+            self.assertEqual(manifest["selected_annotated_neurons"]["MBONs"], 1)
+            self.assertEqual(manifest["one_hop_connection_rows"], 4)
+            self.assertTrue((root / "site/role_connectivity.png").exists())
+            roles = pd.read_csv(root / "site/role_connectivity.csv")
+            kc_to_mbon = roles[(roles["pre_role"] == "Kenyon cells") & (roles["post_role"] == "MBONs")]
+            self.assertEqual(int(kc_to_mbon["synapses"].iloc[0]), 6)
+
     def test_download_writes_hash_manifest_and_gzip_exports(self):
         payload = gzip.compress(b"root_id,cell_type\n1,Kenyon cell\n")
 
