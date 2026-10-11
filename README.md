@@ -2,6 +2,8 @@
 
 A browser-only interactive sandbox for exploring associative learning in a **simplified, mushroom-body-inspired circuit**. It demonstrates paired-cue learning, recall, extinction, and reversal with no build step or server-side component.
 
+The research book and reproducible experiments are in [`research/`](research/). The published book is available at [fly.castalia.institute/research](https://fly.castalia.institute/research/).
+
 ## Run it
 
 Open `index.html` in a modern browser, or serve this folder with any static web server. The application uses local JavaScript and canvas; the optional typeface is fetched from Google Fonts. No experiment data is uploaded.

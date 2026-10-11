@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+research/book/_build/
+research/data/raw/**
+research/data/processed/**
+research/results/**
+!research/data/raw/.gitkeep
+!research/data/processed/.gitkeep
