@@ -160,3 +160,46 @@ def mean_sem(records: Iterable[dict], *, group_by: tuple[str, ...]) -> list[dict
         row["n"] = len(array)
         result.append(row)
     return result
+
+
+def summarize_experiments(
+    acquisition: list[dict], extinction: list[dict], reversal: list[dict]
+) -> list[dict[str, str | float | int]]:
+    """Process replicate-level records into pre-defined response metrics."""
+    summaries: list[dict[str, str | float | int]] = []
+
+    def add(metric: str, description: str, values: Iterable[float], unit: str = "approach − avoid") -> None:
+        values_array = np.asarray(list(values), dtype=np.float64)
+        if not len(values_array):
+            raise ValueError(f"No observations available for {metric}.")
+        sem = float(values_array.std(ddof=1) / np.sqrt(len(values_array))) if len(values_array) > 1 else 0.0
+        if np.isclose(sem, 0.0, atol=1e-12):
+            sem = 0.0
+        summaries.append({"metric": metric, "description": description, "n": int(len(values_array)), "mean": float(values_array.mean()), "sem": sem, "unit": unit})
+
+    paired_first = {int(row["replicate"]): float(row["value"]) for row in acquisition if row["group"] == "paired" and row["trial"] == 1}
+    paired_last = {int(row["replicate"]): float(row["value"]) for row in acquisition if row["group"] == "paired" and row["trial"] == max(r["trial"] for r in acquisition if r["group"] == "paired")}
+    control_last = {int(row["replicate"]): float(row["value"]) for row in acquisition if row["group"] == "cue-only control" and row["trial"] == max(r["trial"] for r in acquisition if r["group"] == "cue-only control")}
+    paired_replicates = sorted(paired_last.keys() & control_last.keys())
+    add("paired_after_first", "Paired cue after the first sugar pairing", (paired_first[key] for key in sorted(paired_first)))
+    add("paired_at_acquisition_end", "Paired cue after the final sugar pairing", (paired_last[key] for key in paired_replicates))
+    add("cue_only_control_at_acquisition_end", "Cue-only control after the same number of exposures", (control_last[key] for key in paired_replicates))
+    add("paired_minus_control", "Paired minus cue-only control at acquisition end", (paired_last[key] - control_last[key] for key in paired_replicates))
+
+    extinction_start = {int(row["replicate"]): float(row["value"]) for row in extinction if row["phase"] == "after acquisition"}
+    extinction_end_trial = max(row["trial"] for row in extinction if row["phase"] == "cue only")
+    extinction_end = {int(row["replicate"]): float(row["value"]) for row in extinction if row["phase"] == "cue only" and row["trial"] == extinction_end_trial}
+    extinction_replicates = sorted(extinction_start.keys() & extinction_end.keys())
+    add("extinction_start", "Cue value immediately after acquisition", (extinction_start[key] for key in extinction_replicates))
+    add("extinction_end", f"Cue value after {extinction_end_trial} unreinforced presentations", (extinction_end[key] for key in extinction_replicates))
+    add("extinction_retained_fraction", "Final cue value divided by post-acquisition value", (extinction_end[key] / extinction_start[key] for key in extinction_replicates if extinction_start[key] != 0), "fraction retained")
+
+    reversal_start_trial = max(row["trial"] for row in reversal if row["phase"] == "sugar")
+    reversal_end_trial = max(row["trial"] for row in reversal if row["phase"] == "bitter reversal")
+    reversal_start = {int(row["replicate"]): float(row["value"]) for row in reversal if row["phase"] == "sugar" and row["trial"] == reversal_start_trial}
+    reversal_end = {int(row["replicate"]): float(row["value"]) for row in reversal if row["phase"] == "bitter reversal" and row["trial"] == reversal_end_trial}
+    reversal_replicates = sorted(reversal_start.keys() & reversal_end.keys())
+    add("reversal_start", "Cue value immediately before reversal", (reversal_start[key] for key in reversal_replicates))
+    add("reversal_end", f"Cue value after {reversal_end_trial} bitter pairings", (reversal_end[key] for key in reversal_replicates))
+    add("reversal_negative_fraction", "Replicates with negative cue value after reversal", (float(reversal_end[key] < 0) for key in reversal_replicates), "fraction negative")
+    return summaries

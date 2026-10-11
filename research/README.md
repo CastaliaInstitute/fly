@@ -10,9 +10,12 @@ source .venv/bin/activate
 python -m pip install -r research/requirements.txt
 python -m unittest discover -s research/tests -v
 jupyter book build research/book --html --execute
+python -m research.run_experiments --replicates 40
 ```
 
 The book renders to `research/book/_build/html/`. The experiment notebook and model run without external data. Real FlyWire files are downloaded locally through the Codex export flow below; raw and processed connectome files are excluded from Git.
+
+`python -m research.run_experiments` saves replicate-level CSVs, a processed summary table, a run manifest, and PNG figures under `research/results/`.
 
 ## Download and prepare FlyWire v783
 

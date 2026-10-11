@@ -7,6 +7,7 @@ from research.src.fly_memory import (
     extinction_experiment,
     mean_sem,
     reversal_experiment,
+    summarize_experiments,
 )
 
 
@@ -42,6 +43,15 @@ class MushroomBodyToyTests(unittest.TestCase):
         self.assertEqual(len(reversal), 21)
         summary = mean_sem(acquisition, group_by=("group", "trial"))
         self.assertTrue(all("mean" in row and "sem" in row for row in summary))
+
+    def test_processed_results_match_the_protocol_directions(self):
+        acquisition = acquisition_experiment(replicates=4, trials=6)
+        extinction = extinction_experiment(replicates=4, acquisition_trials=6, extinction_trials=5)
+        reversal = reversal_experiment(replicates=4, acquisition_trials=6, reversal_trials=6)
+        summary = {row["metric"]: row["mean"] for row in summarize_experiments(acquisition, extinction, reversal)}
+        self.assertGreater(summary["paired_at_acquisition_end"], summary["cue_only_control_at_acquisition_end"])
+        self.assertLess(summary["extinction_end"], summary["extinction_start"])
+        self.assertLess(summary["reversal_end"], summary["reversal_start"])
 
 
 if __name__ == "__main__":
